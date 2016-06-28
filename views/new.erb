@@ -1,0 +1,29 @@
+<h1>Make a booking!</h1>
+
+<form action="/booking" method="post">
+  <label for="first_name">First name:</label>
+  <input type="text" name="first_name">
+  <label for="last_name">Last name:</label>
+  <input type="text" name="last_name"><br>
+
+<label for="type_of_room">What type of room would you like?</label>
+  <select name="type_of_room">
+    <option value="Luxury Suite">Luxury Suite</option>
+    <option value="King">King</option>
+    <option value="Double">Double</option>
+    <option value="Twin">Twin</option>
+    <option value="Single">Single</option>
+  </select><br>
+
+  <label for="breakfast">Would you like breakfast?</label><br>
+  <input type="radio" name="breakfast" value="true" checked>Yes
+  <input type="radio" name="breakfast" value="false">No<br>
+
+  <label for="number_of_nights">How many nights?</label>
+  <input type="number" name="number_of_nights" min="1" max="14"><br>
+
+  <label for="check_in_date">Check-in date:</label>
+  <input type="date" name="check_in_date"><br>
+
+  <input type="submit" value="Book now">
+</form>
