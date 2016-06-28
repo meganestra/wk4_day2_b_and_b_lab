@@ -1,0 +1,23 @@
+<h1>Bookings:</h1>
+
+<% @guests.each do |guest| %>
+  <b>Guest:</b>
+  <p><%= guest.full_name %></p>
+  <b>Bookings:</b>
+  <% bookings = guest.bookings %>
+  <% bookings.each do |booking| %>
+  <b>Number of nights:</b>
+  <p><%= booking.number_of_nights%></p>
+  <b>Check-in date:</b>
+  <p><%= booking.check_in_date%></p>
+  <b>Type of room:</b>
+  <p><%= booking.type_of_room%></p>
+  <b>Breakfast:</b>
+  <% if booking.breakfast ==  "t" %>
+  <p><%="Breakfast confirmed"%></p>
+  <% else %>
+  <p><%="Breakfast not confirmed"%></p>
+  <%end%>
+
+  <%end%>
+<%end%>
